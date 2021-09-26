@@ -50,8 +50,8 @@ rake db:seed
 rails c
 ```
 9. Access http://localhost:3000
-## API
-All API (except login API) must have Authorization header with auth_token which has been generated in login API
+# API
+Note: All API (except login API) must have Authorization header with auth_token which has been generated in login API
 1. Login with email & password
 ```sh
 POST api/users/login
