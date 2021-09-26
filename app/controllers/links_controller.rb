@@ -15,7 +15,7 @@ class LinksController < ResourcesController
   protected
 
   def klass
-    Link.active.where(created_by: current_user.id)
+    Link.active.where(created_by: current_user.id).order(created_at: :desc)
   end
 
   def permitted_params

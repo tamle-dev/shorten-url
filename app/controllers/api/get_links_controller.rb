@@ -16,7 +16,7 @@ class Api::GetLinksController < ::Api::AuthController
   private
 
   def get_links
-    Link.active.where(created_by: current_user.id)
+    Link.active.where(created_by: current_user.id).order(created_at: :desc)
   end
 end
 
