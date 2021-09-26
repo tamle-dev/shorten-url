@@ -1,0 +1,37 @@
+- content_for :filter do
+  = render 'shared/filter' do |f|
+    .row.m--margin-bottom-20
+      .col-lg-8.m--margin-bottom-10-tablet-and-mobile
+        = f.input :url_cont, label: 'URL', input_html: { class: 'form-control m-input' }, required: false
+      .col-lg-4.m--margin-bottom-10-tablet-and-mobile
+        = f.input :slug_cont, label: 'Slug', input_html: { class: 'form-control m-input' }, required: false
+
+= render 'shared/crud/index', collection: @collection do
+  .m-section
+    .m-section__content
+      table.table.table-bordered.m-table.m-table--border-brand.m-table--head-bg-brand
+        thead
+          tr
+            th #
+            th URL
+            th SHORTENED
+            th CLICKED
+            th
+        tbody
+          - @collection.each_with_index do |resource, idx|
+            tr
+              td
+                b
+                  = idx + 1
+              td
+                = resource.url
+              td
+                = resource.shorten_url
+              td.text-center
+                = resource.clicked
+              td.text-center
+                a href="#{link_path(resource)}" class="btn btn-success m-btn m-btn--icon btn-sm m-btn--icon-only"
+                  i.fa.flaticon-eye
+                '
+                = link_to link_path(resource), method: :delete, data: { confirm: t('.confirm', default:  t('helpers.links.confirm', default: 'Are you sure?')) }, class: 'btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only'
+                  i.fa.flaticon-circle

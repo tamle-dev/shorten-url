@@ -1,0 +1,27 @@
+= render 'shared/crud/show', resource: @resource do
+  table.table.table-bordered
+    tr
+      td style="width: 30%"
+        | URL
+      td
+        = @resource.url
+    tr
+      td style="width: 30%"
+        | Slug
+      td
+        = @resource.slug
+    tr
+      td style="width: 30%"
+        | Clicked
+      td
+        = @resource.clicked
+    tr
+      td style="width: 30%"
+        | Shortend URL
+      td#m_clipboard_2.form-control
+        = @resource.shorten_url
+        br
+        br
+        a.btn.btn-secondary data-clipboard="true" data-clipboard-target="#m_clipboard_2" href="#" 
+          i.la.la-clipboard
+          | Copy to clipboard

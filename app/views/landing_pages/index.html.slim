@@ -1,0 +1,54 @@
+doctype html
+html lang="en" 
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta charset="utf-8" /
+    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
+    title Shorten URL
+    meta content=("Knight is a beautiful Bootstrap 4 template for product landing pages.") name="description" /
+    link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet" /
+    link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /
+    link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet" /
+    link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" rel="stylesheet" /
+    = stylesheet_link_tag 'landing_page', media: 'all'
+  body
+    section.smart-scroll
+      .container-fluid
+        nav.navbar.navbar-expand-md.navbar-dark
+          a.navbar-brand.heading-black href="index.html" 
+            | Shorten URL
+          button.navbar-toggler.navbar-toggler-right.border-0 aria-controls="navbarCollapse" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarCollapse" data-toggle="collapse" type="button" 
+            span data-feather="grid" 
+          #navbarCollapse.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+              / li.nav-item
+              /   a.nav-link.page-scroll href="#features"  Features
+              / li.nav-item
+              /   a.nav-link.page-scroll href="#pricing"  Pricing
+              / li.nav-item
+              /   a.nav-link.page-scroll href="#faq"  FAQ
+              / li.nav-item
+              /   a.nav-link.page-scroll href="#blog"  Blog
+              / li.nav-item
+              /   a.nav-link.page-scroll.d-flex.flex-row.align-items-center.text-primary href="#{new_user_session_path}" 
+              /     em.mr-2 data-feather="layout" height="18" width="18"
+              /     | Sign in
+    section#home.py-7.py-md-0.bg-hero
+      .container
+        .row.vh-md-100
+          .col-md-8.col-sm-10.col-12.mx-auto.my-auto.text-center
+            h1.heading-black.text-capitalize Shorten URL built with powerful tools to help you grow and protect your brand
+            p.lead.py-3
+              | Your brand wasn’t built to be hidden. Help it stand out with branded links that drive 34% more clicks.
+            a href="#{new_user_session_path}"
+              button.btn.btn-primary.d-inline-flex.flex-row.align-items-center onclick="location.href='http://www.google.com'"
+                | Get started now
+                em.ml-2 data-feather="arrow-right" 
+    script src="https://code.jquery.com/jquery-3.2.1.min.js" 
+    script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+    script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js" 
+    script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" 
+
+    javascript:
+    = javascript_include_tag 'landing_page'

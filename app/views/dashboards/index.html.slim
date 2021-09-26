@@ -28,4 +28,24 @@
                   | Total URL have been generate
               .col.m--align-right
                 span.m-widget1__number.m--font-danger
-                  = @total_urls
+                  = @total_links
+.m-portlet.m-portlet--bordered-semi.m-portlet--full-height
+  .m-portlet__head
+    .m-portlet__head-caption
+      .m-portlet__head-title
+        h3.m-portlet__head-text
+          | Top 100 clicked
+  .m-portlet__body
+    .m-widget4
+      - @top_clicked.each do |link|
+        .m-widget4__item
+          .m-widget4__info
+            span.m-widget4__title
+              = link.url
+            br/
+            span.m-widget4__sub
+              = link.slug
+          span.m-widget4__ext
+            span.m-widget4__number.m--font-brand
+              = link.clicked
+

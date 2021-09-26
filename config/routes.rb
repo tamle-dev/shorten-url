@@ -3,10 +3,20 @@ Rails.application.routes.draw do
 
   resources :dashboards
 
-  root 'dashboards#index'
+  resources :links
+  resources :link_forms, path: :links
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get :version, to: 'api/application#version'
+  get ':slug', to: 'links#access'
 
-  # root 'api/application#healthz'
+  root 'landing_pages#index'
+
+  namespace :api do
+    post 'users/login', to: 'login#call'
+
+    post 'links/shorten', to: 'shorten_link#call'
+    get 'links', to: 'get_links#call'
+    get 'links/:slug', to: 'get_link#call'
+
+    get :version, to: 'api/application#version'
+  end
 end
