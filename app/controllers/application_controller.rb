@@ -1,6 +1,8 @@
+require 'application_responder'
+
 class ApplicationController < ActionController::Base
-  before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :authenticate_user!
+  self.responder = ApplicationResponder
+  respond_to :html
 
   layout 'user'
 
@@ -20,10 +22,6 @@ class ApplicationController < ActionController::Base
   end
 
   protected
-
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :password_confirmation])
-  end
 
   def paging(collection)
     collection.page(params[:page]).per(params[:per_page] || 10)
