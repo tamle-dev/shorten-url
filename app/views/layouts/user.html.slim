@@ -1,0 +1,30 @@
+doctype html
+html[lang="en"]
+  head
+    = render "shared/header"
+  body.m-page--fluid.m--skin-.m-content--skin-light2.m-header--fixed.m-header--fixed-mobile.m-aside-left--enabled.m-aside-left--skin-dark.m-aside-left--fixed.m-aside-left--offcanvas.m-footer--push.m-aside--offcanvas-default
+    .m-grid.m-grid--hor.m-grid--root.m-page
+      header#m_header.m-grid__item.m-header[m-minimize-offset="200" m-minimize-mobile-offset="200"]
+        .m-container.m-container--fluid.m-container--full-height
+          .m-stack.m-stack--ver.m-stack--desktop
+            = render "shared/brand"
+            #m_header_nav.m-stack__item.m-stack__item--fluid.m-header-head
+              = render "shared/horizontal_menu"
+              = render "shared/topbar"
+      .m-grid__item.m-grid__item--fluid.m-grid.m-grid--ver-desktop.m-grid--desktop.m-body
+        button#m_aside_left_close_btn.m-aside-left-close.m-aside-left-close--skin-dark
+          i.la.la-close
+        #m_aside_left.m-grid__item.m-aside-left.m-aside-left--skin-dark
+          = render "shared/menu"
+        .m-grid__item.m-grid__item--fluid.m-wrapper
+          = render "shared/sub_header"
+          .m-content
+            = yield
+      = render "shared/footer"
+    = render "shared/scroll_top"
+
+    javascript:
+    = javascript_include_tag 'user'
+
+    - if content_for?(:javascript_inline)
+      = yield(:javascript_inline)

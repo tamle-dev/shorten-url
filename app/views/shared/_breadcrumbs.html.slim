@@ -1,0 +1,24 @@
+ul.m-subheader__breadcrumbs.m-nav.m-nav--inline
+  - breadcrumbs(autoroot: false).tap do |links|
+    - links.each do |link|
+      - if links.first == link
+          li.m-nav__item.m-nav__item--home
+            a.m-nav__link.m-nav__link--icon href="#{link.url}"
+              i.m-nav__link-icon.la.la-home
+          li.m-nav__separator
+            i.m-nav__link-icon.fa.fa-angle-right
+            | &nbsp;&nbsp;&nbsp;&nbsp;
+      - else
+        - unless links.last == link
+          li.m-nav__item
+            a.m-nav__link href="#{link.url}"
+              span.m-nav__link-text
+                = link.text
+          | &nbsp;&nbsp;&nbsp;&nbsp;
+          li.m-nav__separator
+            i.m-nav__link-icon.fa.fa-angle-right
+            | &nbsp;&nbsp;&nbsp;&nbsp;
+        - else
+          li.m-nav__item.m--font-primary
+            span.m-nav__link-text
+              = link.text

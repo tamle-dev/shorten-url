@@ -1,0 +1,11 @@
+meta charset="utf-8"
+title= content_for?(:title) ? yield(:title) : 'GCRP'
+= csrf_meta_tags
+= csp_meta_tag
+
+meta name="description" content="Latest updates and statistic charts"
+meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+script[src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"]
+script
+  |  WebFont.load({ google: { "families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"] }, active: function() { sessionStorage.fonts = true; } });
+= stylesheet_link_tag 'user', media: 'all'

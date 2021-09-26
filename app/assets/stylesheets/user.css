@@ -1,0 +1,15 @@
+ /*
+ *= require crm/assets/vendors/custom/fullcalendar/fullcalendar.bundle
+ *= require crm/assets/vendors/custom/datatables/datatables.bundle
+ *= require crm/assets/vendors/base/vendors.bundle
+ *= require crm/assets/demo/default/base/style.bundle
+ *
+ *= require_self
+ *
+ */
+
+  /*@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&display=swap');*/
+
+  * {
+    font-family: 'Be Vietnam', sans-serif;
+  }

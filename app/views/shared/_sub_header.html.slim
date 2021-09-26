@@ -1,0 +1,7 @@
+.m-subheader
+  .d-flex.align-items-center
+    .mr-auto
+      h3.m-subheader__title.m-subheader__title--separator
+        = yield(:subheader_title)
+      = render "shared/breadcrumbs"
+    = yield(:subheader_button)

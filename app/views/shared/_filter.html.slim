@@ -1,0 +1,9 @@
+.m-section__content
+  = search_form_for @q, url: collection_path, builder: SimpleForm::FormBuilder, class: 'm-form m-form--fit m--margin-bottom-20' do |f|
+    = yield f
+    .row
+      .col-lg-12
+        = f.submit 'Search', class: 'btn btn-brand m-btn m-btn--icon', id: 'm_search'
+        | &nbsp;
+        = link_to t('helpers.links.reset'), collection_path, class: 'btn btn-secondary m-btn m-btn--icon', id: 'm_reset'
+    .m-separator.m-separator--md.m-separator--dashed

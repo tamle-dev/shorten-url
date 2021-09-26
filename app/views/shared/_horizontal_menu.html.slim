@@ -1,0 +1,366 @@
+/ .m-subheader
+/   .d-flex.align-items-center
+/     .mr-auto
+/       h3.m-subheader__title.m-subheader__title--separator
+/         = yield(:subheader_title)
+/       = render "crm/shared/breadcrumbs"
+
+/ button#m_aside_header_menu_mobile_close_btn.m-aside-header-menu-mobile-close.m-aside-header-menu-mobile-close--skin-dark
+/   i.la.la-close
+/ #m_header_menu.m-header-menu.m-aside-header-menu-mobile.m-aside-header-menu-mobile--offcanvas.m-header-menu--skin-light.m-header-menu--submenu-skin-light.m-aside-header-menu-mobile--skin-dark.m-aside-header-menu-mobile--submenu-skin-dark
+/   ul.m-menu__nav.m-menu__nav--submenu-arrow
+/     li.m-menu__item.m-menu__item--submenu.m-menu__item--rel[m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true"]
+/       a.m-menu__link.m-menu__toggle[href="javascript:;"]
+/         i.m-menu__link-icon.flaticon-add
+/         span.m-menu__link-text
+/           = yield(:subheader_title)
+/         i.m-menu__hor-arrow.la.la-angle-down
+/         i.m-menu__ver-arrow.la.la-angle-right
+/       .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--left
+/         span.m-menu__arrow.m-menu__arrow--adjust
+/         ul.m-menu__subnav
+/           li.m-menu__item[aria-haspopup="true"]
+/             a.m-menu__link[href="header/actions.html"]
+/               i.m-menu__link-icon.flaticon-file
+/               span.m-menu__link-text
+/                 | Create New Post
+/           li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/             a.m-menu__link[href="header/actions.html"]
+/               i.m-menu__link-icon.flaticon-diagram
+/               span.m-menu__link-title
+/                 span.m-menu__link-wrap
+/                   span.m-menu__link-text
+/                     | Generate Reports
+/                   span.m-menu__link-badge
+/                     span.m-badge.m-badge--success
+/                       | 2
+/           li.m-menu__item.m-menu__item--submenu[m-menu-submenu-toggle="hover" m-menu-link-redirect="1" aria-haspopup="true"]
+/             a.m-menu__link.m-menu__toggle[href="javascript:;"]
+/               i.m-menu__link-icon.flaticon-business
+/               span.m-menu__link-text
+/                 | Manage Orders
+/               i.m-menu__hor-arrow.la.la-angle-right
+/               i.m-menu__ver-arrow.la.la-angle-right
+/             .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--right
+/               span.m-menu__arrow
+/               ul.m-menu__subnav
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Latest Orders
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Pending Orders
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Processed Orders
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Delivery Reports
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Payments
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Customers
+/           li.m-menu__item.m-menu__item--submenu[m-menu-submenu-toggle="hover" m-menu-link-redirect="1" aria-haspopup="true"]
+/             a.m-menu__link.m-menu__toggle[href="#"]
+/               i.m-menu__link-icon.flaticon-chat-1
+/               span.m-menu__link-text
+/                 | Customer Feedbacks
+/               i.m-menu__hor-arrow.la.la-angle-right
+/               i.m-menu__ver-arrow.la.la-angle-right
+/             .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--right
+/               span.m-menu__arrow
+/               ul.m-menu__subnav
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Customer Feedbacks
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Supplier Feedbacks
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Reviewed Feedbacks
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Resolved Feedbacks
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Feedback Reports
+/           li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/             a.m-menu__link[href="header/actions.html"]
+/               i.m-menu__link-icon.flaticon-users
+/               span.m-menu__link-text
+/                 | Register Member
+/     li.m-menu__item.m-menu__item--submenu.m-menu__item--rel[m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true"]
+/       a.m-menu__link.m-menu__toggle[href="javascript:;"]
+/         i.m-menu__link-icon.flaticon-line-graph
+/         span.m-menu__link-text
+/           | Reports
+/         i.m-menu__hor-arrow.la.la-angle-down
+/         i.m-menu__ver-arrow.la.la-angle-right
+/       .m-menu__submenu.m-menu__submenu--fixed.m-menu__submenu--left[style="width:1000px"]
+/         span.m-menu__arrow.m-menu__arrow--adjust
+/         .m-menu__subnav
+/           ul.m-menu__content
+/             li.m-menu__item
+/               h3.m-menu__heading.m-menu__toggle
+/                 span.m-menu__link-text
+/                   | Finance Reports
+/                 i.m-menu__ver-arrow.la.la-angle-right
+/               ul.m-menu__inner
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-map
+/                     span.m-menu__link-text
+/                       | Annual Reports
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-user
+/                     span.m-menu__link-text
+/                       | HR Reports
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-clipboard
+/                     span.m-menu__link-text
+/                       | IPO Reports
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-graphic-1
+/                     span.m-menu__link-text
+/                       | Finance Margins
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-graphic-2
+/                     span.m-menu__link-text
+/                       | Revenue Reports
+/             li.m-menu__item
+/               h3.m-menu__heading.m-menu__toggle
+/                 span.m-menu__link-text
+/                   | Project Reports
+/                 i.m-menu__ver-arrow.la.la-angle-right
+/               ul.m-menu__inner
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--line
+/                       span
+/                     span.m-menu__link-text
+/                       | Coca Cola CRM
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--line
+/                       span
+/                     span.m-menu__link-text
+/                       | Delta Airlines Booking Site
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--line
+/                       span
+/                     span.m-menu__link-text
+/                       | Malibu Accounting
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--line
+/                       span
+/                     span.m-menu__link-text
+/                       | Vineseed Website Rewamp
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--line
+/                       span
+/                     span.m-menu__link-text
+/                       | Zircon Mobile App
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--line
+/                       span
+/                     span.m-menu__link-text
+/                       | Mercury CMS
+/             li.m-menu__item
+/               h3.m-menu__heading.m-menu__toggle
+/                 span.m-menu__link-text
+/                   | HR Reports
+/                 i.m-menu__ver-arrow.la.la-angle-right
+/               ul.m-menu__inner
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--dot
+/                       span
+/                     span.m-menu__link-text
+/                       | Staff Directory
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--dot
+/                       span
+/                     span.m-menu__link-text
+/                       | Client Directory
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--dot
+/                       span
+/                     span.m-menu__link-text
+/                       | Salary Reports
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--dot
+/                       span
+/                     span.m-menu__link-text
+/                       | Staff Payslips
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--dot
+/                       span
+/                     span.m-menu__link-text
+/                       | Corporate Expenses
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-bullet.m-menu__link-bullet--dot
+/                       span
+/                     span.m-menu__link-text
+/                       | Project Expenses
+/             li.m-menu__item
+/               h3.m-menu__heading.m-menu__toggle
+/                 span.m-menu__link-text
+/                   | Reporting Apps
+/                 i.m-menu__ver-arrow.la.la-angle-right
+/               ul.m-menu__inner
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Report Adjusments
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Sources & Mediums
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Reporting Settings
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Conversions
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Report Flows
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     span.m-menu__link-text
+/                       | Audit & Logs
+/     li.m-menu__item.m-menu__item--submenu.m-menu__item--rel[m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true"]
+/       a.m-menu__link.m-menu__toggle[href="javascript:;"]
+/         i.m-menu__link-icon.flaticon-paper-plane
+/         span.m-menu__link-title
+/           span.m-menu__link-wrap
+/             span.m-menu__link-text
+/               | Apps
+/             span.m-menu__link-badge
+/               span.m-badge.m-badge--brand.m-badge--wide
+/                 | new
+/         i.m-menu__hor-arrow.la.la-angle-down
+/         i.m-menu__ver-arrow.la.la-angle-right
+/       .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--left
+/         span.m-menu__arrow.m-menu__arrow--adjust
+/         ul.m-menu__subnav
+/           li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/             a.m-menu__link[href="header/actions.html"]
+/               i.m-menu__link-icon.flaticon-business
+/               span.m-menu__link-text
+/                 | eCommerce
+/           li.m-menu__item.m-menu__item--submenu[m-menu-submenu-toggle="hover" m-menu-link-redirect="1" aria-haspopup="true"]
+/             a.m-menu__link.m-menu__toggle[href="crud/datatable_v1.html"]
+/               i.m-menu__link-icon.flaticon-computer
+/               span.m-menu__link-text
+/                 | Audience
+/               i.m-menu__hor-arrow.la.la-angle-right
+/               i.m-menu__ver-arrow.la.la-angle-right
+/             .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--right
+/               span.m-menu__arrow
+/               ul.m-menu__subnav
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-users
+/                     span.m-menu__link-text
+/                       | Active Users
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-interface-1
+/                     span.m-menu__link-text
+/                       | User Explorer
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-lifebuoy
+/                     span.m-menu__link-text
+/                       | Users Flows
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-graphic-1
+/                     span.m-menu__link-text
+/                       | Market Segments
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-graphic
+/                     span.m-menu__link-text
+/                       | User Reports
+/           li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/             a.m-menu__link[href="header/actions.html"]
+/               i.m-menu__link-icon.flaticon-map
+/               span.m-menu__link-text
+/                 | Marketing
+/           li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/             a.m-menu__link[href="header/actions.html"]
+/               i.m-menu__link-icon.flaticon-graphic-2
+/               span.m-menu__link-title
+/                 span.m-menu__link-wrap
+/                   span.m-menu__link-text
+/                     | Campaigns
+/                   span.m-menu__link-badge
+/                     span.m-badge.m-badge--success
+/                       | 3
+/           li.m-menu__item.m-menu__item--submenu[m-menu-submenu-toggle="hover" m-menu-link-redirect="1" aria-haspopup="true"]
+/             a.m-menu__link.m-menu__toggle[href="javascript:;"]
+/               i.m-menu__link-icon.flaticon-infinity
+/               span.m-menu__link-text
+/                 | Cloud Manager
+/               i.m-menu__hor-arrow.la.la-angle-right
+/               i.m-menu__ver-arrow.la.la-angle-right
+/             .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--left
+/               span.m-menu__arrow
+/               ul.m-menu__subnav
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-add
+/                     span.m-menu__link-title
+/                       span.m-menu__link-wrap
+/                         span.m-menu__link-text
+/                           | File Upload
+/                         span.m-menu__link-badge
+/                           span.m-badge.m-badge--danger
+/                             | 3
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-signs-1
+/                     span.m-menu__link-text
+/                       | File Attributes
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-folder
+/                     span.m-menu__link-text
+/                       | Folders
+/                 li.m-menu__item[m-menu-link-redirect="1" aria-haspopup="true"]
+/                   a.m-menu__link[href="header/actions.html"]
+/                     i.m-menu__link-icon.flaticon-cogwheel-2
+/                     span.m-menu__link-text
+/                       | System Settings

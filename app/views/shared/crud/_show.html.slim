@@ -1,0 +1,15 @@
+- breadcrumb klass_name.to_sym, resource
+
+- content_for :subheader_title do
+  = klass_name.upcase
+
+.m-portlet
+  .m-portlet__body
+    = yield
+    .m-portlet__foot.m-portlet__no-border.m-portlet__foot--fit
+    .m-form__actions.m-form__actions--solid
+      .row
+        .col-lg-12.m--align-right
+          a.button.btn.btn-secondary href="#{collection_path}"
+            | Back
+          | &nbsp;

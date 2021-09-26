@@ -1,0 +1,21 @@
+- unless defined?(can_create)
+  - can_create = true
+- breadcrumb klass_plural_name.to_sym
+
+- content_for :subheader_title do
+  = klass_name.upcase
+
+- if can_create
+  - content_for :subheader_button do
+    .m-dropdown.m-dropdown--inline.m-dropdown--arrow.m-dropdown--align-right.m-dropdown--align-push[m-dropdown-toggle="hover" aria-expanded="true"]
+        a.btn.btn-success.m-btn.m-btn--custom.m-btn--icon.m-btn--air href=new_resource_path
+          span
+            i.la.la-plus
+            span
+              = "New #{klass.model_name}"
+
+.m-portlet
+  .m-portlet__body
+    = yield(:filter)
+    = yield
+    / = render 'user/shared/paging', collection: collection

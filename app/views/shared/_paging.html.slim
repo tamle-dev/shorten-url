@@ -1,0 +1,10 @@
+.m-section
+  .m-section__content
+    #m_table_1_wrapper.dataTables_wrapper.container-fluid.dt-bootstrap4.no-footer
+      .row
+        .col-sm-12.col-md-5
+          #m_table_1_info.dataTables_info aria-live="polite" role="status"
+            = page_entries_info @collection
+        .col-sm-12.col-md-7
+          #m_table_1_paginate.dataTables_paginate.paging_simple_numbers
+            = paginate @collection
