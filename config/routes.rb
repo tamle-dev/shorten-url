@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :links
   resources :link_forms, path: :links
 
-  get ':slug', to: 'links#access'
+  get ':slug', to: 'landing_pages#access'
 
   root 'landing_pages#index'
 

@@ -19,13 +19,11 @@ ActiveRecord::Schema.define(version: 2021_09_26_045146) do
     t.text "url"
     t.string "slug"
     t.integer "clicked"
-    t.integer "user_id"
     t.integer "created_by"
-    t.integer "updated_by"
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_links_on_user_id"
+    t.index ["created_by"], name: "index_links_on_created_by"
   end
 
   create_table "users", force: :cascade do |t|

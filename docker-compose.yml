@@ -17,6 +17,7 @@ services:
   db:
     image: postgres:11.10
     environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
       - POSTGRES_DB=shorten_url_development
       - POSTGRES_USER=stu1
       - POSTGRES_PASSWORD=stu1sEcRet

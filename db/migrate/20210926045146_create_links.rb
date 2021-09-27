@@ -10,6 +10,6 @@ class CreateLinks < ActiveRecord::Migration[6.1]
       t.timestamps
     end
 
-    add_index :links, :user_id
+    add_index :links, :created_by
   end
 end
