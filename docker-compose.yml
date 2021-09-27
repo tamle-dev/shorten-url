@@ -17,13 +17,8 @@ services:
   db:
     image: postgres:11.10
     environment:
-      - POSTGRES_DB=google_crawler_development
-      - POSTGRES_USER=gcu1
-      - POSTGRES_PASSWORD=gcu1sEcRet
-    volumes:
-      - db-data:/var/lib/postgresql/data
+      - POSTGRES_DB=shorten_url_development
+      - POSTGRES_USER=stu1
+      - POSTGRES_PASSWORD=stu1sEcRet
     ports:
       - 5432:5432
-
-volumes:
-  db-data:
