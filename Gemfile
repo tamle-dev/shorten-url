@@ -31,6 +31,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails', '~> 0.3.9'
+  gem 'awesome_print', '~> 1.9', '>= 1.9.2'
 
   # A Ruby gem to load environment variables from `.env`
   gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
@@ -39,6 +40,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
   gem 'factory_bot_rails', '~> 6.2'
   gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
+  gem 'rexml', '~> 3.2', '>= 3.2.5'
 end
 
 group :development do
@@ -58,6 +60,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'timecop', '~> 0.9.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -67,6 +70,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pg', '~> 1.2', '>= 1.2.3'
 
 # Authentication
+gem 'jwt'
 gem 'devise', '~> 4.8'
 
 # Parse json
@@ -81,6 +85,10 @@ gem 'slim-rails', '~> 3.3'
 gem 'jquery-rails', '~> 4.4'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
 gem 'simple_form', '~> 5.1'
+gem 'nested_form_fields', '~> 0.8.4'
+gem 'nested_form', '~> 0.3.2'
 gem 'gretel', '~> 4.3'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
 gem 'bootstrap4-kaminari-views', '~> 1.0', '>= 1.0.1'
+
+gem 'brotli', '~> 0.4.0'

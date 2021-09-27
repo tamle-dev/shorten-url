@@ -1,3 +1,3 @@
 crumb :root do
-  link "Home", root_path
+  link "Home", dashboards_path
 end

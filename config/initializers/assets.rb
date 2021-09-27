@@ -13,3 +13,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 Rails.application.config.assets.precompile += %w( auth.js auth.css )
 Rails.application.config.assets.precompile += %w( user.js user.css )
+Rails.application.config.assets.precompile += %w( landing_page.js landing_page.css )

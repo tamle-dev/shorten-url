@@ -12,6 +12,6 @@
 //= require crm/assets/demo/default/custom/crud/forms/widgets/bootstrap-touchspin
 //= require crm/assets/demo/default/custom/crud/forms/widgets/bootstrap-select
 //= require crm/assets/demo/default/custom/crud/forms/widgets/summernote
-//= require crm/assets/demo/default/custom/crud/forms/widgets/dropzone
 //= require crm/assets/demo/default/custom/crud/forms/widgets/form-repeater
+//= require crm/assets/demo/default/custom/crud/forms/widgets/clipboard.js
 
