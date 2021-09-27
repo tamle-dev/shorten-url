@@ -90,3 +90,5 @@ gem 'nested_form', '~> 0.3.2'
 gem 'gretel', '~> 4.3'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
 gem 'bootstrap4-kaminari-views', '~> 1.0', '>= 1.0.1'
+
+gem 'brotli', '~> 0.4.0'

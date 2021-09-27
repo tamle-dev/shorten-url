@@ -1,0 +1,17 @@
+/.bundle
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/assets
+/.byebug_history
+/config/master.key
+/dump.rdb
+/coverage
+/test/*
+/*.swp
+/public/uploads
+/log/*
+/tmp/*
+/storage/*
+!/storage/.keep
+!/log/.keep
+!/tmp/.keep
