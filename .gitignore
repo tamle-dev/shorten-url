@@ -38,3 +38,10 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Ignore env
+.env
+/docs
+
+# Ignore vscode
+/.vscode
