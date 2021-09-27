@@ -12,15 +12,16 @@ This web application will shorten your URL.
 git clone git@github.com:tamle-dev/shorten-url.git
 ```
 2. Duplicate .env from .env.example
-3. Build image
+3. Make sure `DB_USER` and `DB_PASSWORD` in docker-compose.yml and .env are the same
+4. Build image
 ```sh
 docker build . -t tamle:lastest
 ```
-4. Compose container
+5. Compose container
 ```sh
 docker-compose up -d
 ```
-5. Access http://localhost:3000
+6. Access http://localhost:3000
 ## Manual
 1. Install PostgreSQL
 ```sh
